@@ -1,0 +1,11 @@
+server: 
+    port: 8081
+spring: 
+    cloud:
+        server:
+            git: 
+                default-label: config-server
+                uri: https://github.com/SamDpg/microServices_Spring_tutorial
+                search-paths: config-data
+    application:
+        name: config-service
