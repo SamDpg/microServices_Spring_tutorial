@@ -48,7 +48,7 @@ public class UserService {
 
     @SuppressWarnings(value = "unchecked")
     public List<Car> getCars(int userID) {
-        List<Car> cars = restTemplate.getForObject("http://carservice/car/byuser/" + userID, List.class);
+        List<Car> cars = restTemplate.getForObject("http://localhost/car/byuser/" + userID, List.class);
 
         return cars;
     }
@@ -58,7 +58,7 @@ public class UserService {
     // to conform to List<Car>
     @SuppressWarnings(value = "unchecked")
     public List<Bike> getBikes(int userID) {
-        List<Bike> bikes = restTemplate.getForObject("http://bikeservice/bike/byuser/" + userID, List.class);
+        List<Bike> bikes = restTemplate.getForObject("http://localhost/bike/byuser/" + userID, List.class);
 
         return bikes;
     }
